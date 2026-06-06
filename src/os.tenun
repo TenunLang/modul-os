@@ -1,0 +1,64 @@
+// Modul OS — informasi sistem operasi. Pembungkus builtin infoOS/lingkungan.
+
+// Nama OS: "windows" | "linux" | "macos" | dst.
+fungsi os_nama(): teks {
+    kembali infoOS("nama");
+}
+
+// Arsitektur CPU: "x86_64" | "aarch64" | dst.
+fungsi os_arch(): teks {
+    kembali infoOS("arch");
+}
+
+// Nama host / komputer.
+fungsi os_host(): teks {
+    kembali infoOS("host");
+}
+
+// Nama pengguna yang menjalankan proses.
+fungsi os_pengguna(): teks {
+    kembali infoOS("pengguna");
+}
+
+// Jumlah core CPU.
+fungsi os_cpu(): bulat {
+    kembali keBulat(infoOS("cpu"));
+}
+
+// Direktori kerja saat ini.
+fungsi os_cwd(): teks {
+    kembali infoOS("cwd");
+}
+
+// Direktori temporer.
+fungsi os_temp(): teks {
+    kembali infoOS("temp");
+}
+
+// Nilai variabel lingkungan ("" bila tidak ada).
+fungsi os_env(nama: teks): teks {
+    kembali lingkungan(nama);
+}
+
+// True bila berjalan di Windows.
+fungsi os_windows(): bool {
+    kembali os_nama() == "windows";
+}
+
+// True bila berjalan di Linux.
+fungsi os_linux(): bool {
+    kembali os_nama() == "linux";
+}
+
+// Ringkasan info OS sebagai peta.
+fungsi os_info(): peta {
+    biar m: peta = peta{};
+    m["nama"] = os_nama();
+    m["arch"] = os_arch();
+    m["host"] = os_host();
+    m["pengguna"] = os_pengguna();
+    m["cpu"] = infoOS("cpu");
+    m["cwd"] = os_cwd();
+    m["temp"] = os_temp();
+    kembali m;
+}

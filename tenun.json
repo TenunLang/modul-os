@@ -1,0 +1,10 @@
+{
+  "nama": "os",
+  "versi": "0.1.0",
+  "deskripsi": "Informasi sistem operasi untuk Tenun: nama OS, arch, hostname, pengguna, CPU, env.",
+  "lisensi": "MIT",
+  "penulis": "TenunLang",
+  "berkas": "src/os.tenun",
+  "kataKunci": ["os", "sistem", "hostname", "lingkungan", "env", "info"],
+  "butuh": {}
+}
