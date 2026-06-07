@@ -1,0 +1,6 @@
+impor "../src/os.tenun";
+
+tegas(panjangTeks(os_nama()) > 0, "os_nama tak kosong");
+tegas(panjangTeks(os_arch()) > 0, "os_arch tak kosong");
+tegas(os_cpu() >= 1, "cpu minimal 1");
+tegas(os_linux() || os_windows(), "linux atau windows");

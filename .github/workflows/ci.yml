@@ -18,3 +18,5 @@ jobs:
           printf 'impor "os";\n' > cek.tenun
           "$HOME/.tenun/bin/tenun" run cek.tenun
           echo "modul os valid"
+      - name: Uji unit
+        run: "$HOME/.tenun/bin/tenun" check .
